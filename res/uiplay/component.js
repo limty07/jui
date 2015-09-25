@@ -320,8 +320,6 @@ function changeTheme(theme) {
             color: "#2e383c"
         });
     } else {
-        alert("Dark theme is being tested.It has not yet been released.");
-
         $(".CodeMirror.cm-s-neo").css({
             "background-color": "#1c1c1c",
             color: "#d5d5d5"
