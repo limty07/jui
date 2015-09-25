@@ -2793,7 +2793,7 @@
   background-position: 0 0;
 }
 .jui .paging > .list > * {
-  margin: -3px 0 0 -5px;
+  margin: -1px 0 0 -5px;
 }
 .jui .paging > * + *:not(ul) {
   margin-left: -7px;
@@ -2837,7 +2837,7 @@
   background-position: 0 0;
 }
 .jui .paging.normal > .list > * {
-  margin: -3px 0 0 -5px;
+  margin: -1px 0 0 -5px;
 }
 .jui .paging.large {
   height: 38px;
