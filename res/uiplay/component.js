@@ -242,6 +242,9 @@ function viewCodeEditor() {
             success: function(data) {
                 types.show(1);
                 editor2.setValue(data);
+
+                // 현재 테마 적용
+                changeTheme($("select").find("option:selected").val());
             },
             error: function(data, error) {
                 console.log(error);
@@ -263,6 +266,9 @@ function viewCodeEditor() {
                     success: function(data) {
                         types.show(0);
                         editor.setValue(data);
+
+                        // 현재 테마 적용
+                        changeTheme($("select").find("option:selected").val());
                     },
                     error: function(data, error) {
                         console.log(error);
@@ -300,6 +306,26 @@ function updateComponent(isCode) {
 
     if(isCode && code != "") {
         eval(code);
+    }
+}
+
+function changeTheme(theme) {
+    $(".chart_view").attr("class", "chart_view " + theme);
+    $(".chart_data").attr("class", "chart_data " + theme);
+    $("#jui_theme").attr("href", "../../lib/jui.new/" + theme + ".theme.min.css");
+
+    if(theme == "jennifer") {
+        $(".CodeMirror.cm-s-neo").css({
+            "background-color": "#ffffff",
+            color: "#2e383c"
+        });
+    } else {
+        alert("Dark theme is being tested.It has not yet been released.");
+
+        $(".CodeMirror.cm-s-neo").css({
+            "background-color": "#1c1c1c",
+            color: "#d5d5d5"
+        });
     }
 }
 
