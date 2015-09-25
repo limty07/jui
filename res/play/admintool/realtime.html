@@ -6,7 +6,7 @@
 <link rel="icon" href="../../../res/img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../../../res/index.css"/>
 <link rel="stylesheet" href="../../../lib/jui.new/jui.min.css"/>
-<link rel="stylesheet" href="../../../lib/jui.new/jennifer.theme.min.css"/>
+<link id="jui_theme" rel="stylesheet" href="../../../lib/jui.new/jennifer.theme.min.css"/>
 <script src="../../../lib/jquery-1.8.0.min.js"></script>
 <script src="../../../lib/jui/jui.min.js"></script>
 <script src="admin.js" type="text/javascript"></script>
@@ -34,6 +34,13 @@
   <div class="toolbar">
 
     <span>Realtime</span>
+    <span >
+        Themes
+        <select onchange="changeTheme(this.value)">
+          <option value="jennifer">Jennifer</option>
+          <option value="dark">Dark</option>
+        </select>
+    </span>
     <span style="float:right">
       Sample <i class="icon-check"></i>
     </span>
@@ -165,6 +172,7 @@ function runRealtimeData(realtime) {
     realtimeIndex++;
   }, 1000);
 }
+var chart_list = [];
 
 var c = chart("#realtime_chart_1", {
   axis : {
@@ -191,7 +199,7 @@ var c = chart("#realtime_chart_1", {
     type : "tooltip"
   }]
 });
-
+chart_list[chart_list.length] = c;
 runRealtimeData(c);
 
 
@@ -211,7 +219,7 @@ var clock_chart = chartbuilder("#clock", {
     barBorderOpacity : 0.3
   }
 });
-
+chart_list[chart_list.length] = clock_chart;
 function step(timestamp) {
   var d = new Date();
   clock_chart.axis(0).update([{ hour : d.getHours(), minute : d.getMinutes(), second : d.getSeconds(), millisecond : d.getMilliseconds() }]);
@@ -255,7 +263,7 @@ var gauge_chart = chartbuilder("#gauge", {
     fontFamily: "Open Sans"
   }
 });
-
+chart_list[chart_list.length] = gauge_chart;
 
 function stepGauge(timestamp) {
   gauge_chart.axis(0).update([
@@ -268,6 +276,23 @@ function stepGauge(timestamp) {
 }
 
 setInterval(stepGauge, 2000);
+
+
+function changeTheme(theme) {
+  // change ui
+  $("#jui_theme").attr("href", "../../../lib/jui.new/" + theme + ".theme.min.css");
+
+  // change chart
+
+  for(var i = 0, len = chart_list.length; i < len; i++) {
+    if (chart_list[i].setTheme) {
+      chart_list[i].setTheme(theme);
+    } else {
+      chart_list[i].chart.setTheme(theme);
+    }
+  }
+}
+
 
 </script>
 </body>
