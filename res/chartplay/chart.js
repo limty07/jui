@@ -12,6 +12,7 @@ var charts = [
     { type: "grid2", title : "Grid Style" },
     { type: "grid3", title : "Grid Type" },
     { type: "map", title : "Map Chart" },
+    { type: "full3d", title : "Full 3D Chart" },
     { type: "3d", title : "3D Chart" },
     { type: "mixed", title : "Combination Chart" },
     { type: "realtime", title : "Realtime Chart" },
@@ -72,6 +73,10 @@ var code_list = [
     { type: "map", title : "Use External Markup",  code : "worldmap3.js" },
     { type: "map", title : "Market growth comparison",  code : "worldmap4.js" },
     { type: "map", title : "Today's Weather",  code : "koreamap_weather.js" },
+
+    // full 3d chart
+    { type: "full3d", title : "Full 3D Scatter",  code : "full3d_scatter.js" },
+    { type: "full3d", title : "Full 3D Column",  code : "full3d_column.js" },
 
     // 3d chart
     { type: "3d", title : "Basic 3D Bar",  code : "bar3d.js" },
