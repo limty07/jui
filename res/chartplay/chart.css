@@ -8,7 +8,7 @@ body {
     background-image: none !important;
 }
 
-.header {
+body > .header {
     position:absolute;
     left: 0px;
     top: 0px;
@@ -20,7 +20,7 @@ body {
     color: white;
 }
 
-.header .logo {
+body > .header .logo {
     position: relative;
     float: left;
     width: 98px;
@@ -32,19 +32,19 @@ body {
     font-weight: 900;
 }
 
-.header .logo > img {
+body > .header .logo > img {
     max-height: 100%;
     margin-top: -4px;
     cursor: pointer;
 }
 
-.header .toolbar {
+body > .header .toolbar {
     position: relative;
     padding: 20px;
     padding-left: 270px;
 }
 
-.container {
+body > .container {
     position: absolute;
     top:58px;
     left:0px;
@@ -53,7 +53,7 @@ body {
     height:auto !important;
 }
 
-.container > .menu {
+body > .container > .menu {
     position: absolute;
     width: 250px;
     left:0px;
@@ -62,7 +62,7 @@ body {
     overflow: auto;
 }
 
-.container > .content {
+body > .container > .content {
     padding: 0 !important;
     position:absolute;
     top:0px;
