@@ -47,5 +47,6 @@ chart("#chart", {
         gridXAxisBorderWidth: 1,
         gridYAxisBorderWidth: 1,
         gridZAxisBorderWidth: 1
-    }
+    },
+    delay : 300
 });
