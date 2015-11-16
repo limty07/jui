@@ -1927,9 +1927,17 @@
 }
 .jui .colorpicker {
   border: 1px solid #ececec;
-  -webkit-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.12);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.jui .colorpicker > .color {
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  border-top-right-radius: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  border-top-left-radius: 0px;
 }
 .jui .colorpicker > .color > .saturation {
   background-color: rgba(204, 154, 129, 0);
