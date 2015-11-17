@@ -3829,6 +3829,11 @@
 .jui .colorpicker > .control {
   position: relative;
   padding: 18px 0px 20px 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .jui .colorpicker > .control > .color,
 .jui .colorpicker > .control > .empty {
@@ -3868,19 +3873,14 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.jui .colorpicker > .control > .opacity > .pattern {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 12px;
-  right: 12px;
-  z-index: 1;
-}
 .jui .colorpicker > .control > .opacity > .container {
   position: relative;
   width: 100%;
   height: 3px;
   z-index: 2;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .jui .colorpicker > .control > .input {
   position: absolute;
