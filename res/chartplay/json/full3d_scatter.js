@@ -48,5 +48,5 @@ chart("#chart", {
         gridYAxisBorderWidth: 1,
         gridZAxisBorderWidth: 1
     },
-    delay : 300
+    delay : 100
 });
