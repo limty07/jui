@@ -11,10 +11,16 @@
     </table>
 </div>
 
-<script id="tpl_dates" type="text/template">
-    <tr>
-        <! for(var i = 0; i < dates.length; i++) { !>
-        <td><!= dates[i] !></td>
+<script id="tpl_date" type="text/template">
+    <td>
+    <! if(type != "none") { !>
+        <! if(day == 0) { !>
+        <span style="color: red;"><!= date !></span>
+        <! } else if(day == 6) { !>
+        <span style="color: blue;"><!= date !></span>
+        <! } else { !>
+        <span><!= date !></span>
         <! } !>
-    </tr>
+    <! } !>
+    </td>
 </script>

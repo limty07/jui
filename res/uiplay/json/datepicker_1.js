@@ -14,7 +14,7 @@ jui.ready([ "ui.datepicker" ], function(datepicker) {
             }
         },
         tpl: {
-            dates: $("#tpl_dates").html()
+            date: $("#tpl_date").html()
         }
     });
 });
