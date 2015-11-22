@@ -8,7 +8,7 @@ jui.ready([ "uix.xtable" ], function(xtable) {
         ],
         resize: true,
         sort: true,
-        width: 1000,
+        width: 800,
         scrollWidth: 600
     });
 });
