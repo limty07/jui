@@ -28,7 +28,12 @@ chart("#chart", {
             { sales: 8, profit: 10, total: 20, value: 60 },
             { sales: 18, profit: 5, total: 20, value: 15 }
         ],
-        depth: 300
+        depth: 300,
+        degree: {
+            x: 0,
+            y: 0,
+            z: 0
+        }
     },
     brush : {
         type: "polygon.scatter",
