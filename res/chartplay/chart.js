@@ -77,6 +77,7 @@ var code_list = [
     // full 3d chart
     { type: "full3d", title : "Full 3D Scatter",  code : "full3d_scatter.js" },
     { type: "full3d", title : "Full 3D Column",  code : "full3d_column.js" },
+    { type: "full3d", title : "Full 3D Line",  code : "full3d_line.js" },
 
     // 3d chart
     { type: "3d", title : "Basic 3D Bar",  code : "bar3d.js" },
