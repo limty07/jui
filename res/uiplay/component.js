@@ -51,7 +51,6 @@ var code_list = [
     { type: "table", title: "Select to multiple rows", code: "table_5" },
     { type: "table", title: "Mouse right-click event", code: "table_6" },
     { type: "table", title: "Sorting rows", code: "table_7" },
-    { type: "table", title: "Editing cell", code: "table_10" },
     { type: "table", title: "Editing rows", code: "table_8" },
     { type: "table", title: "Right-click editing rows", code: "table_9" },
     { type: "table", title: "Remove row", code: "table_11" },
