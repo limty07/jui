@@ -22,12 +22,12 @@ chart("#chart", {
             line: true
         },
         data : [
-            { sales: 0, profit: 15, total: 20, value: 80 },
-            { sales: 15, profit: 6, total: 20, value: 50 },
-            { sales: 8, profit: 10, total: 20, value: 60 },
-            { sales: 18, profit: 5, total: 20, value: 15 }
+            { sales: 0, profit: 15, total: 18, value: 80 },
+            { sales: 15, profit: 6, total: 18, value: 50 },
+            { sales: 8, profit: 10, total: 18, value: 60 },
+            { sales: 18, profit: 5, total: 18, value: 15 }
         ],
-        depth: 100,
+        depth: 150,
         degree: {
             x: 10
         },
@@ -35,7 +35,8 @@ chart("#chart", {
     },
     brush : {
         type: "polygon.line",
-        target : [ "sales", "profit", "total" ]
+        target : [ "sales", "profit", "total" ],
+        padding : 15
     },
     widget : [{
         type : "polygon.rotate"
